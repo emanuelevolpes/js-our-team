@@ -45,9 +45,20 @@ const myTeam = [
     },
 ];
 
+const containerTeam = document.getElementById('team-container');
+
+const myUlTeam = document.createElement('ul');
+
+const myLiTeam = document.createElement('li');
+
 for (let i = 0; i < myTeam.length; i++) {
-    // console.log(myTeam[i]);
-    for (let key in myTeam[i]) {
-        console.log(myTeam[i][key]);
+    containerTeam.append(myUlTeam); //l'elemento creato viene inserito nel mio HTML per 6 volte (la lunghezza del for loop)
+    console.log(myUlTeam);
+    for (let key in myTeam[i]) { //devo creare un altro ciclo per immettere nel mio HTML i dati ocntenuti nelle keys dell'oggetto o posso utilizzare questo?
+        myUlTeam.append(myLiTeam);
+        // console.log(myLiTeam);
+        myLiTeam.innerText = (myTeam[i][key]);
+        console.log(myLiTeam);
+        // console.log(myTeam[i][key]);
     };
 };

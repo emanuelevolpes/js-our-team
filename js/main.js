@@ -45,4 +45,9 @@ const myTeam = [
     },
 ];
 
-console.log(myTeam);
+for (let i = 0; i < myTeam.length; i++) {
+    // console.log(myTeam[i]);
+    for (let key in myTeam[i]) {
+        console.log(myTeam[i][key]);
+    };
+};

@@ -37,22 +37,26 @@ const containerTeam = document.getElementById('team-container');
 
 for (let i = 0; i < myTeam.length; i++) {
 
-    const myUlTeam = document.createElement('ul');
-    containerTeam.append(myUlTeam);
-    console.log(myUlTeam);
+    const myDivTeam = document.createElement('div');
+    myDivTeam.style.setProperty('width', 'calc(100% / 4');
+    myDivTeam.classList.add('card');
+    myDivTeam.classList.add('m-4');
+    containerTeam.append(myDivTeam);
+    console.log(myDivTeam);
 
-    const myLiTeam = document.createElement('li');
-    myUlTeam.append(myLiTeam);
-    myLiTeam.append(myTeam[i].nome);
+    const myImgTeam = document.createElement('img');
+    myImgTeam.style.width = '100%';
+    myImgTeam.classList.add('rounded');
+    myDivTeam.append(myImgTeam);
+    myImgTeam.src = (myTeam[i].foto);
 
-    const myLiTeam2 = document.createElement('li');
-    myUlTeam.append(myLiTeam2);
-    myLiTeam2.append(myTeam[i].ruolo);
+    const myNameTeam = document.createElement('h2');
+    myNameTeam.classList.add('text-center')
+    myDivTeam.append(myNameTeam);
+    myNameTeam.append(myTeam[i].nome);
 
-    const myLiTeam3 = document.createElement('li');
-    const myLiTeam3img = document.createElement('img');
-    myUlTeam.append(myLiTeam3);
-    myLiTeam3.append(myLiTeam3img);
-    myLiTeam3img.src = (myTeam[i].foto);
-
+    const myRoleTeam = document.createElement('h5');
+    myRoleTeam.classList.add('text-center')
+    myDivTeam.append(myRoleTeam);
+    myRoleTeam.append(myTeam[i].ruolo);
 };

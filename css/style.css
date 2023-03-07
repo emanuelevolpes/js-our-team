@@ -1,3 +1,19 @@
 .d-flex {
     display: flex;
 }
+
+body {
+    background-color: #9cb6c4;
+}
+
+header {
+    background-color: #2a52be;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.5rem;
+}
